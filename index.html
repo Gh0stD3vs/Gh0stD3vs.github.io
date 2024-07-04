@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Harris County Accident Report</title>
+    <style>
+        .question-block {
+            margin-bottom: 20px;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .input-group label {
+            margin-right: 10px;
+        }
+        .selected {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form id="qa-form">
+        <h2><b>Official Info</b></h2>
+        <div class="question-block">
+            <div class="input-group">
+                <label for="answer1">Reporting Official:</label>
+                <input type="text" id="answer1" name="Reporting Official">
+            </div>
+        </div>
+        <div class="question-block">
+            <p>Class 4 (Fatal)</p>
+            <button type="button" class="option-button" data-input-id="answer4" onclick="selectOption(this, 'Y')">Y</button> /
+            <button type="button" class="option-button" data-input-id="answer4" onclick="selectOption(this, 'N')">N</button>
+            <input type="hidden" id="answer4" name="`Fatal`">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        function selectOption(button, value) {
+            var inputId = button.dataset.inputId;
+            document.getElementById(inputId).value = value;
+
+            // Remove the 'selected' class from both buttons
+            var buttons = document.querySelectorAll('.option-button[data-input-id="' + inputId + '"]');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('selected');
+            }
+
+            // Add the 'selected' class to the clicked button
+            button.classList.add('selected');
+        }
+
+        document.getElementById('qa-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            var outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = ''; // Clear the output
+
+            // Array of IDs to include in the output
+            var idsToInclude = [
+                'answer1', 'answer2', 'spacer',
+                'answer3', 'answer4', 'answer5', 'answer6', 'answer7', 'answer8', 'answer9', 'spacer',
+                'answer10', 'answer11', 'answer12', 'answer13', 'answer14', 'answer15', 'answer16', 'answer17', 'spacer',
+                'answer18', 'answer19', 'answer20', 'spacer',
+                'answer21', 'answer22', 'answer23', 'answer24', 'spacer'
+            ]; // Add more IDs as needed
+
+            // Loop through the IDs
+            for (var i = 0; i < idsToInclude.length; i++) {
+                var id = idsToInclude[i];
+                
+                // Check if the ID is a spacer
+                if (id === 'spacer') {
+                    var br = document.createElement('br');
+                    outputDiv.appendChild(br);
+
+                } else {
+                    var element = document.getElementById(id);
+
+                    // Create a new paragraph for each question/answer and add it to the output
+                    var p = document.createElement('p');
+                    p.textContent = '> ' + element.name + ': ' + element.value;
+                    outputDiv.appendChild(p);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
