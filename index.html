@@ -32,10 +32,150 @@
             </div>
         </div>
         <div class="question-block">
+            <div class="input-group">
+                <label for="answer2">Other Units Involved:</label>
+                <input type="text" id="answer2" name="Other Units On Scene">
+            </div>
+        </div>
+        <br>
+        <h2><b>General Incident Info</b></h2>
+        <div class="question-block">
+            <div class="input-group">
+                <label for="answer3">Number of Vehicles Involved:</label>
+                <input type="text" id="answer3" name="Vehicles Involved">
+            </div>
+        </div>
+        <div class="question-block">
             <p>Class 4 (Fatal)</p>
             <button type="button" class="option-button" data-input-id="answer4" onclick="selectOption(this, 'Y')">Y</button> /
             <button type="button" class="option-button" data-input-id="answer4" onclick="selectOption(this, 'N')">N</button>
             <input type="hidden" id="answer4" name="`Fatal`">
+        </div>
+        <div class="question-block">
+            <p>CMV Involved (Busses, School Busses, etc.)</p>
+            <button type="button" class="option-button" data-input-id="answer5" onclick="selectOption(this, 'Y')">Y</button> /
+            <button type="button" class="option-button" data-input-id="answer5" onclick="selectOption(this, 'N')">N</button>
+            <input type="hidden" id="answer5" name="`CMV`">
+        </div>
+        <div class="question-block">
+            <p>School Bus Involved</p>
+            <button type="button" class="option-button" data-input-id="answer6" onclick="selectOption(this, 'Y')">Y</button> /
+            <button type="button" class="option-button" data-input-id="answer6" onclick="selectOption(this, 'N')">N</button>
+            <input type="hidden" id="answer6" name="`School Bus`">
+        </div>
+        <div class="question-block">
+            <p>Active School Zone</p>
+            <button type="button" class="option-button" data-input-id="answer7" onclick="selectOption(this, 'Y')">Y</button> /
+            <button type="button" class="option-button" data-input-id="answer7" onclick="selectOption(this, 'N')">N</button>
+            <input type="hidden" id="answer7" name="`Active School Zone`">
+        </div>
+        <div class="question-block">
+            <p>Within 50ft of Railroad / Train Passage</p>
+            <button type="button" class="option-button" data-input-id="answer8" onclick="selectOption(this, 'Y')">Y</button> /
+            <button type="button" class="option-button" data-input-id="answer8" onclick="selectOption(this, 'N')">N</button>
+            <input type="hidden" id="answer8" name="`Railroad`">
+        </div>
+        <div class="question-block">
+            <p>Active Construction Zone</p>
+            <button type="button" class="option-button" data-input-id="answer9" onclick="selectOption(this, 'Y')">Y</button> /
+            <button type="button" class="option-button" data-input-id="answer9" onclick="selectOption(this, 'N')">N</button>
+            <input type="hidden" id="answer9" name="`Construction Zone`">
+        </div>
+        <br>
+        <h2><b>Location & Time</b></h2>
+        <div class="question-block">
+            <div class="input-group">
+                <label for="answer10">Time Accident Occurred:</label>
+                <input type="text" id="answer10" name="Time of Accident">
+            </div>
+        </div>
+        <div class="question-block">
+            <div class="input-group">
+                <label for="answer11">Time of Report (Now):</label>
+                <input type="text" id="answer11" name="Time of Report">
+            </div>
+        </div>
+        <div class="question-block">
+            <div class="input-group">
+                <label for="answer12">State:</label>
+                <input type="text" id="answer12" name="County">
+            </div>
+        </div>
+        <div class="question-block">
+            <div class="input-group">
+                <label for="answer13">County:</label>
+                <input type="text" id="answer13" name="County">
+            </div>
+        </div>
+        <div class="question-block">
+            <div class="input-group">
+                <label for="answer14">City:</label>
+                <input type="text" id="answer14" name="City">
+            </div>
+        </div>
+        <div class="question-block">
+            <div class="input-group">
+                <label for="answer15">Roadway Name & Postal Code:</label>
+                <input type="text" id="answer15" name="Roadway / Postal">
+            </div>
+        </div>
+        <div class="question-block">
+            <div class="input-group">
+                <label for="answer16">Speed Limit:</label>
+                <input type="text" id="answer16" name="Speed Limit">
+            </div>
+        </div>
+        <div class="question-block">
+            <div class="input-group">
+                <label for="answer17">Roadway Alignment:</label>
+                <input type="text" id="answer17" name="Roadway Alignment">
+            </div>
+        </div>
+        <br>
+        <h2><b>Weather Conditions</b></h2>
+        <div class="question-block">
+            <div class="input-group">
+                <label for="answer18">Weather:</label>
+                <input type="text" id="answer18" name="Weather">
+            </div>
+        </div>
+        <div class="question-block">
+            <div class="input-group">
+                <label for="answer19">Light Conditions (1 Dark - 10 Well Lit):</label>
+                <input type="text" id="answer19" name="Light Conditions">
+            </div>
+        </div>
+        <div class="question-block">
+            <div class="input-group">
+                <label for="answer20">Surface Conditions (1 Normal - 10 Flooded):</label>
+                <input type="text" id="answer20" name="Surface Conditions">
+            </div>
+        </div>
+        <br>
+        <h2><b>Additional Scene Info</b></h2>
+        <div class="question-block">
+            <p>Collision w/ Parked Vehicle</p>
+            <button type="button" class="option-button" data-input-id="answer21" onclick="selectOption(this, 'Y')">Y</button> /
+            <button type="button" class="option-button" data-input-id="answer21" onclick="selectOption(this, 'N')">N</button>
+            <input type="hidden" id="answer21" name="`Collision w/ Parked Vehicle`">
+        </div>
+        <div class="question-block">
+            <p>Collision w/ Animal</p>
+            <button type="button" class="option-button" data-input-id="answer22" onclick="selectOption(this, 'Y')">Y</button> /
+            <button type="button" class="option-button" data-input-id="answer22" onclick="selectOption(this, 'N')">N</button>
+            <input type="hidden" id="answer22" name="`Collision w/ Animal`">
+        </div>
+        <div class="question-block">
+            <p>Collision w/ Pedestrian</p>
+            <button type="button" class="option-button" data-input-id="answer23" onclick="selectOption(this, 'Y')">Y</button> /
+            <button type="button" class="option-button" data-input-id="answer23" onclick="selectOption(this, 'N')">N</button>
+            <input type="hidden" id="answer23" name="`Collision w/ Pedestrian`">
+        </div>
+        <div class="question-block">
+            <p>Hit & Run?</p>
+            <button type="button" class="option-button" data-input-id="answer24" onclick="selectOption(this, 'Y')">Y</button> /
+            <button type="button" class="option-button" data-input-id="answer24" onclick="selectOption(this, 'N')">N</button>
+            <input type="hidden" id="answer24" name="`Hit & Run`">
         </div>
         <input type="submit" value="Submit">
     </form>
@@ -46,37 +186,32 @@
         function selectOption(button, value) {
             var inputId = button.dataset.inputId;
             document.getElementById(inputId).value = value;
-
-            // Remove the 'selected' class from both buttons
+            
             var buttons = document.querySelectorAll('.option-button[data-input-id="' + inputId + '"]');
             for (var i = 0; i < buttons.length; i++) {
                 buttons[i].classList.remove('selected');
             }
 
-            // Add the 'selected' class to the clicked button
             button.classList.add('selected');
         }
 
         document.getElementById('qa-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
+            event.preventDefault();
 
             var outputDiv = document.getElementById('output');
-            outputDiv.innerHTML = ''; // Clear the output
+            outputDiv.innerHTML = '';
 
-            // Array of IDs to include in the output
             var idsToInclude = [
                 'answer1', 'answer2', 'spacer',
                 'answer3', 'answer4', 'answer5', 'answer6', 'answer7', 'answer8', 'answer9', 'spacer',
                 'answer10', 'answer11', 'answer12', 'answer13', 'answer14', 'answer15', 'answer16', 'answer17', 'spacer',
                 'answer18', 'answer19', 'answer20', 'spacer',
                 'answer21', 'answer22', 'answer23', 'answer24', 'spacer'
-            ]; // Add more IDs as needed
+            ];
 
-            // Loop through the IDs
             for (var i = 0; i < idsToInclude.length; i++) {
                 var id = idsToInclude[i];
                 
-                // Check if the ID is a spacer
                 if (id === 'spacer') {
                     var br = document.createElement('br');
                     outputDiv.appendChild(br);
@@ -84,7 +219,6 @@
                 } else {
                     var element = document.getElementById(id);
 
-                    // Create a new paragraph for each question/answer and add it to the output
                     var p = document.createElement('p');
                     p.textContent = '> ' + element.name + ': ' + element.value;
                     outputDiv.appendChild(p);
